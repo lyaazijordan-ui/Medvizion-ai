@@ -10,6 +10,9 @@ from dotenv import load_dotenv
 load_dotenv()
 
 app = FastAPI()
+@app.get("/")
+async def root():
+    return {"status": "online", "message": "MedVizion API is Live!"}
 
 # Enable CORS so your frontend can talk to this backend
 app.add_middleware(
