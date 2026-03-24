@@ -34,6 +34,14 @@ def anonymize_medical_data(df):
     to_drop = [c for c in df.columns if any(p in c.lower() for p in pii_cols)]
     return df.drop(columns=to_drop)
 
+@app.get("/")
+async def root():
+    return {
+        "status": "online",
+        "message": "MedVizion AI Clinical Engine is running",
+        "version": "1.0.0",
+        "author": "Your Name"
+    }
 @app.post("/analyze")
 async def analyze(file: UploadFile = File(...)):
     # 1. Load the CSV
