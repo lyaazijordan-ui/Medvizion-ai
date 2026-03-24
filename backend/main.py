@@ -14,7 +14,8 @@ app = FastAPI()
 # Enable CORS so your frontend can talk to this backend
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=["*"],  # This allows ANY website to talk to your backend
+    allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
