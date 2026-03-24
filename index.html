@@ -1,14 +1,3 @@
-window.onload = async () => {
-    try {
-        const check = await fetch('https://medvizion-intellectuals.onrender.com/');
-        if (check.ok) {
-            console.log("Backend is Online!");
-            document.getElementById('file-label').innerText = "System Ready: Drop CSV";
-        }
-    } catch (e) {
-        console.error("Backend offline");
-    }
-};
 <!DOCTYPE html>
 <html lang="en">
 <head>
