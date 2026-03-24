@@ -40,7 +40,7 @@ async def root():
         "status": "online",
         "message": "MedVizion AI Clinical Engine is running",
         "version": "1.0.0",
-        "author": "Your Name"
+        "author": "AI intellectuals"
     }
 @app.post("/analyze")
 async def analyze(file: UploadFile = File(...)):
